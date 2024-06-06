@@ -1,7 +1,10 @@
 @import '../../../styles/settings.module.scss'; 
 .card{
-    width: 200px;
-    height: 285px;
+    // width: 200px;
+    width: 230px;
+    // height: 285px;
+    height: 324px;
+
     box-shadow: 0px 2px 8px 0px #00000022;
     background-color: $white-color;
     display: flex;
@@ -22,6 +25,7 @@
             font-weight: 400;
             font-size: 16px;
             color: $dark-gray1;
+            width: 124px;
         }
 
         .preco{

@@ -12,7 +12,14 @@ const nextConfig = {
     return config;
   },
   images: {
-    domains: ['mks-sistemas.nyc3.digitaloceanspaces.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'mks-sistemas.nyc3.digitaloceanspaces.com',
+        pathname: '**',
+      },
+    ],
+    // domains: ['mks-sistemas.nyc3.digitaloceanspaces.com'],
   },
 };
 
