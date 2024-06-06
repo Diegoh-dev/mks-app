@@ -8,12 +8,37 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        color: $white-color;
 
         .logo{
             display: flex;
+            align-items: center;
+            gap: .5rem;
            h1,h6{
             margin: 0;
            }
+           h1{
+            font-size: 40px;
+           }
+           h6{
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 19px;
+           }
+        }
+
+        .buttonCar{
+            width: 90px;
+            border-radius: 8px;
+            height: 45px;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
         }
     }
 }
