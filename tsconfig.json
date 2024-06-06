@@ -18,7 +18,7 @@
     "types": ["@testing-library/jest-dom"],
     "paths": {
       "@/components/*": ["src/components/*"],
-      "@/pages/*": ["pages/*"],
+      "@/api/*": ["src/api/*"],
       "@/styles/*": ["styles/*"]
     },
     "plugins": [

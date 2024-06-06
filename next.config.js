@@ -1,4 +1,3 @@
-// next.config.js
 /** @type {import('next').NextConfig} */
 
 const path = require('path');
@@ -11,6 +10,9 @@ const nextConfig = {
     };
 
     return config;
+  },
+  images: {
+    domains: ['mks-sistemas.nyc3.digitaloceanspaces.com'],
   },
 };
 

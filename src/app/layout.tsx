@@ -1,4 +1,5 @@
 import { montserrat } from "./fontes";
+import ReactQueryProvider from "src/libs/providers/providers";
 
 export default function RootLayout({
   children,
@@ -7,7 +8,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br" className={montserrat.className}>
+      <ReactQueryProvider>
       <body>{children}</body>
+      </ReactQueryProvider>
     </html>
   );
 }
