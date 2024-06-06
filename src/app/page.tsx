@@ -1,3 +1,4 @@
+import { CardProduto } from "@/components/cardProduto/cardProduto";
 import Header from "@/components/header/header";
 
 export const metadata = {
@@ -8,7 +9,29 @@ export default function Page() {
   return (
     <>
       <Header />
-      <h1>App Roudster</h1>
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "22px",
+        }}
+      >
+        <CardProduto />
+        <CardProduto />
+        <CardProduto />
+        <CardProduto />
+        <CardProduto />
+        <CardProduto />
+        <CardProduto />
+        <CardProduto />
+        <CardProduto />
+        <CardProduto />
+        <CardProduto />
+        <CardProduto />
+        <CardProduto />
+        <CardProduto />
+        <CardProduto />
+      </div>
     </>
   );
 }
