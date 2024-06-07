@@ -1,0 +1,15 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 2px 8px 0px #00000022;
+    border-radius: 8px;
+    padding: 14px 14px 0 14px;
+    height: 280px;
+    
+.skeletonImage{
+    width: 217px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+}
