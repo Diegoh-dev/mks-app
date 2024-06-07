@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { MdCancel } from "react-icons/md";
-import { Produto } from "src/domain/produtos/produtoType";
 import styles from "./CardItem.module.scss";
 import { useContext } from "react";
 import { CarrinhoItem, ContextProduto } from "src/context/contextProduto";
@@ -8,11 +7,8 @@ import { formatCurrency } from "../../functions/formatCurrency";
 
 interface Props {
   produto: CarrinhoItem;
-  decrement: () => void;
-  increment: () => void;
-  quantity: number;
 }
-export function CardItem({ produto, decrement, increment, quantity }: Props) {
+export function CardItem({ produto }: Props) {
   const { incrementarQuantidade, decrementarQuantidade, removerItem } =
     useContext(ContextProduto);
 

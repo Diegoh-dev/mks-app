@@ -13,6 +13,7 @@ export default function RootLayout({
         <body
           style={{
             position: "relative",
+            margin:'0',
           }}
         >
           {children}
