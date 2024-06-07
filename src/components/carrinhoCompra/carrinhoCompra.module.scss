@@ -107,58 +107,68 @@
   }
 
 
-  // @media only screen and (max-width: 534px) {
-  //   .containerCarrinho {
-  //     width: 100%;
-  //     padding: 20px 10px;
-  //   }
+  @media only screen and (max-width: 534px) {
+    .containerCarrinho {
+      // width: 100%;
+      width: 270px;
+      
+      padding: 20px;
+    }
   
-  //   .containerItens {
-  //     flex-direction: column;
-  //     align-items: flex-start;
-  //   }
+    .containerItens {
+      // flex-direction: column;
+      align-items:center;
+    }
   
-  //   .containerTitle p {
-  //     width: 100%;
-  //     font-size: 24px;
-  //     line-height: 28px;
-  //     text-align: center;
-  //   }
+    .containerTitle p {
+      width: 150px;
+      font-size: 24px;
+      line-height: 32.91px;
+      text-align: center;
+    }
+
+    .produtosSelecionados{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 15px;
+    }
   
-  //   .produtosSelecionados {
-  //     gap: 15px;
-  //     margin-top: 10px;
-  //   }
+    .produtosSelecionados {
+      gap: 15px;
+      margin-top: 10px;
+    }
   
-  //   .rodape {
-  //     margin-left: 0;
-  //   }
+    .rodape {
+      margin-left: 0;
+    }
   
-  //   .rodape .total {
-  //     flex-direction: column;
-  //     align-items: flex-start;
-  //     padding: 0 20px;
-  //     font-size: 24px;
-  //   }
+    .rodape .total {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0 20px;
+      font-size: 24px;
+    }
   
-  //   .rodape .botao {
-  //     height: 80px;
-  //   }
+    .rodape .botao {
+      height: 80px;
+    }
   
-  //   .rodape .botao button {
-  //     height: 80px;
-  //     font-size: 24px;
-  //   }
+    .rodape .botao button {
+      height: 80px;
+      font-size: 24px;
+    }
   
-  //   .container {
-  //     flex-direction: column;
-  //   }
+    .container {
+      flex-direction: column;
+    }
   
-  //   .selector {
-  //     margin-top: 10px;
-  //   }
+    .selector {
+      margin-top: 10px;
+    }
   
-  //   .quantity {
-  //     font-size: 14px;
-  //   }
-  // }
+    .quantity {
+      font-size: 14px;
+    }
+  }
