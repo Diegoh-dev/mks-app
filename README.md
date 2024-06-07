@@ -3,8 +3,8 @@
 
 
 
-<img src="./MksDesktop.png" alt="desktop">
-<img src="./MksMobile.png" alt="mobile">
+<img src="./public/MksDesktop.png" alt="desktop">
+<img src="./public/MksMobile.png" alt="mobile">
 
 # Explicação
 
