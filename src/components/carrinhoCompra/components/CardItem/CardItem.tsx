@@ -14,33 +14,10 @@ export function CardItem({ produto }: Props) {
 
   return (
     <>
-      <div
-        style={{
-          // width: "385px",
-          height: "95px",
-          backgroundColor: "#FFF",
-          boxShadow: "-2px 2px 10px 0px #0000000D",
-          borderRadius: "8px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          position: "relative",
-          // padding:'15px'
-        }}
-      >
+      <div className={styles.containercardItem}>
         <button
+          className={styles.buttonclose}
           onClick={() => removerItem(produto.produto.id)}
-          style={{
-            position: "absolute",
-            right: "-4px",
-            top: "-7px",
-            margin:'0',
-            padding:'0',
-            border:'none',
-            background:'transparent',
-            outline:'none',
-            cursor:'pointer'
-          }}
         >
           <MdCancel size={20} />
         </button>
@@ -75,10 +52,12 @@ export function CardItem({ produto }: Props) {
             </button>
           </div>
         </div>
+
         <span
           style={{ fontSize: "14px", fontWeight: 700, marginLeft: ".3rem" }}
         >
-          R$ {formatCurrency(produto.quantidade * Number(produto.produto.price))}{" "}
+          R${" "}
+          {formatCurrency(produto.quantidade * Number(produto.produto.price))}{" "}
         </span>
       </div>
     </>

@@ -1,8 +1,7 @@
-import { Dispatch, SetStateAction, useContext, useState } from "react";
+import { Dispatch, SetStateAction, useContext } from "react";
 import { MdCancel } from "react-icons/md";
 import styles from "./carrinhoCompra.module.scss";
 import { ContextProduto } from "src/context/contextProduto";
-import Image from "next/image";
 import { CardItem } from "./components/CardItem/CardItem";
 import { somaTotal } from "./functions/somaTotalCarrinho";
 import { motion } from "framer-motion";
