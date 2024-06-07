@@ -4,6 +4,7 @@ import { Produto } from "src/domain/produtos/produtoType";
 import styles from "./CardItem.module.scss";
 import { useContext } from "react";
 import { CarrinhoItem, ContextProduto } from "src/context/contextProduto";
+import { formatCurrency } from "../../functions/formatCurrency";
 
 interface Props {
   produto: CarrinhoItem;
@@ -81,7 +82,7 @@ export function CardItem({ produto, decrement, increment, quantity }: Props) {
         <span
           style={{ fontSize: "14px", fontWeight: 700, marginLeft: ".3rem" }}
         >
-          R$ {produto.quantidade * Number(produto.produto.price)}{" "}
+          R$ {formatCurrency(produto.quantidade * Number(produto.produto.price))}{" "}
         </span>
       </div>
     </>
