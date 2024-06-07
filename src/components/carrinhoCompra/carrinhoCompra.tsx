@@ -25,7 +25,8 @@ export function CarrinhoCompra({setOpenCarrinho}:Props) {
     }
   };
 
-  console.log('soam:',somaTotal(listaItens))
+
+  console.log('soam:',listaItens)
 
   return (
     <div className={styles.containerCarrinho}>
