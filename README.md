@@ -1,35 +1,47 @@
-# Next.js + Jest
 
-This example shows how to configure Jest to work with Next.js.
+#  MKS Sistemas - E-commerce
 
-This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScript. This example also shows how to use Jest with the App Router and React Server Components.
 
-> **Note:** Since tests can be co-located alongside other files inside the App Router, we have placed those tests in `app/` to demonstrate this behavior (which is different than `pages/`). You can still place all tests in `__tests__` if you prefer.
 
-## Deploy your own
+<img src="./MksDesktop.png" alt="desktop">
+<img src="./MksMobile.png" alt="mobile">
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-jest&project-name=with-jest&repository-name=with-jest)
+# Explicação
 
-## How to Use
+O MKS Sistemas é um projeto de e-commerce desenvolvido para proporcionar uma experiência de compra online fácil e intuitiva.
 
-Quickly get started using [Create Next App](https://github.com/vercel/next.js/tree/canary/packages/create-next-app#readme)!
+# Funcionalidades Principais
 
-In your terminal, run the following command:
+- Lista de Produtos: Exibição de diversos produtos com imagens, descrições breves e preços
+
+- Carrinho de Compras: Funcionalidade para adicionar produtos ao carrinho de compras e gerenciar os itens antes de finalizar a compra.
+
+# Tecnologias
+
+- Next
+- TypeScript
+- React-query
+- SASS
+- Framer-motion
+- Jest
+- Typescript
+- Testing-library
+
+# Como usar?
+Antes de começar, você precisa ter o Git e o Node instalados.
 
 ```bash
-npx create-next-app --example with-jest with-jest-app
+# Clone this project
+git clone https://github.com/Diegoh-dev/mks-app.git
+# access
+cd mks-app
+# install dependencies
+ yarn
+# Run the project
+$ yarn dev
 ```
+    
 
-```bash
-yarn create next-app --example with-jest with-jest-app
-```
+# Colaboradores
 
-```bash
-pnpm create next-app --example with-jest with-jest-app
-```
-
-## Running Tests
-
-```bash
-npm test
-```
+- Diegoh-dev
