@@ -19,23 +19,25 @@ export function CardItem({ produto }: Props) {
           className={styles.buttonclose}
           onClick={() => removerItem(produto.produto.id)}
         >
-          <MdCancel size={20} />
+          <MdCancel className={styles.closebutton} size={20} />
         </button>
 
-        <div style={{ display: "flex", alignItems: "center" }}>
+        <div className={styles.containerImage} >
           <Image
+          className={styles.image}
             src={produto.produto.photo}
             height={50}
             width={45}
             alt={produto.produto.name}
           />
-          <p style={{ fontSize: "13px", width: "113px" }}>
+          <p className={styles.nomeProduto}>
             {produto.produto.name}
           </p>
         </div>
 
-        <div className={styles.container}>
-          <span>Qtd: </span>
+      <div className={styles.containerIncrementaSoma}>
+      <div className={styles.container}>
+          <span className={styles.quantidade}>Qtd: </span>
           <div className={styles.selector}>
             <button
               onClick={() => decrementarQuantidade(produto.produto.id)}
@@ -54,11 +56,13 @@ export function CardItem({ produto }: Props) {
         </div>
 
         <span
+        className={styles.totalPreco}
           style={{ fontSize: "14px", fontWeight: 700, marginLeft: ".3rem" }}
         >
           R${" "}
           {formatCurrency(produto.quantidade * Number(produto.produto.price))}{" "}
         </span>
+      </div>
       </div>
     </>
   );

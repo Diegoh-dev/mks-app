@@ -29,6 +29,11 @@
     align-items: center;
   };
 
+  .totalPreco{
+    font-size: 14px;
+     font-weight: 700;
+      margin-left: .3rem;
+  }
 
   .selector {
     display: flex;
@@ -51,4 +56,82 @@
     border-right: 1px solid #ccc;
     padding: 6px 8px;
     font-size: 16px;
+  }
+
+  .containerImage{
+    display: flex;
+    align-items: center;
+
+    .nomeProduto{
+    font-size: 13px; 
+    width: 113px;
+    }
+  }
+
+  .containerIncrementaSoma{
+
+  }
+
+  .quantidade{
+    display: block;
+  }
+
+  .closebutton{
+
+  }
+  @media only screen and (max-width: 534px){
+    .containercardItem{
+      height: 220px;
+      flex-direction: column;
+      width: 250px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .containerImage{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .image{
+        width: 80px;
+        height: 80px;
+      }
+
+
+      .nomeProduto{
+        width:initial;
+        font-size: 16px;
+      }
+    }
+
+    .container{
+      // display: inline-block;
+      align-items: center;
+    };
+
+    .totalPreco{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+      background-color: #373737;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    .containerIncrementaSoma{
+      display: flex;
+      // align-items: center;
+        gap: 15px;
+      }
+
+      .quantidade{
+        display: none;
+      }
+
+      .closebutton{
+          width: 30px;
+          height: 30px;
+      }
   }
