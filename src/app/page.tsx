@@ -5,7 +5,6 @@ import { CarrinhoCompra } from "@/components/carrinhoCompra/carrinhoCompra";
 import { Footer } from "@/components/footer/footer";
 import Header from "@/components/header/header";
 import { useState } from "react";
-import { Produto } from "src/domain/produtos/produtoType";
 import { motion, AnimatePresence } from 'framer-motion';
 export default function Page() {
 

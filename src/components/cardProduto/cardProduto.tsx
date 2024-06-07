@@ -10,17 +10,8 @@ interface Props {
 }
 export function CardProduto({ produto }: Props) {
 
-  // const {setListaItens,listaItens} = useContext(ContextProduto);
-  const { adicionarItem, listaItens, incrementarQuantidade, decrementarQuantidade } = useContext(ContextProduto);
+  const { adicionarItem} = useContext(ContextProduto);
 
-
-  // function addProdutoCar(){
-  //   setListaItens((prev) => [...prev,produto])
-  // }
-
-  console.log({
-    listaItens
-  })
   return (
     <div className={styles.card}>
       <Image src={produto.photo} height={138} width={100} alt={produto.name} />
