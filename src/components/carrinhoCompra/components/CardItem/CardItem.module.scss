@@ -26,7 +26,8 @@
 
 .container{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column
   };
 
   .totalPreco{
@@ -69,11 +70,14 @@
   }
 
   .containerIncrementaSoma{
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .quantidade{
     display: block;
+    font-size: 10px;
   }
 
   .closebutton{
