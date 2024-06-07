@@ -5,6 +5,7 @@ import { ContextProduto } from "src/context/contextProduto";
 import Image from "next/image";
 import { CardItem } from "./components/CardItem/CardItem";
 import { somaTotal } from "./functions/somaTotalCarrinho";
+import { motion } from 'framer-motion';
 export function CarrinhoCompra() {
   const { setListaItens, listaItens } = useContext(ContextProduto);
   const [quantity, setQuantity] = useState(1);
@@ -57,8 +58,27 @@ export function CarrinhoCompra() {
           marginTop: "20px",
         }}
       >
-        {/* card produto */}
+        
         {listaItens?.map((produto, index) => {
+        return (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: index * 0.1 }}
+          >
+            <CardItem
+              decrement={decrement}
+              increment={increment}
+              produto={produto}
+              quantity={quantity}
+            />
+          </motion.div>
+        );
+      })}
+
+        {/* card produto */}
+        {/* {listaItens?.map((produto, index) => {
           return (
             <CardItem
               key={index}
@@ -67,52 +87,9 @@ export function CarrinhoCompra() {
               produto={produto}
               quantity={quantity}
             />
-            //   <div
-            //     key={index}
-            //     style={{
-            //       // width: "385px",
-            //       height: "95px",
-            //       backgroundColor: "#FFF",
-            //       boxShadow: "-2px 2px 10px 0px #0000000D",
-            //       borderRadius: "8px",
-            //       display: "flex",
-            //       alignItems: "center",
-            //       justifyContent: "center",
-            //       position: "relative",
-            //       // padding:'15px'
-            //     }}
-            //   >
-            //     <div
-            //       style={{
-            //         position: "absolute",
-            //         right: "-4px",
-            //         top: "-7px",
-            //       }}
-            //     >
-            //       <MdCancel size={20} />
-            //     </div>
-
-            //  <div style={{display:'flex',alignItems:'center'}}>
-            //  <Image src={produto.photo} height={50} width={45} alt={produto.name} />
-            //  <p style={{fontSize:'13px',width:'113px'}}>{produto.name}</p>
-            //  </div>
-
-            //     <div className={styles.container}>
-            //       <span>Qtd: </span>
-            //       <div className={styles.selector}>
-            //         <button onClick={decrement} className={styles.button}>
-            //           -
-            //         </button>
-            //         <span className={styles.quantity}>{quantity}</span>
-            //         <button onClick={increment} className={styles.button}>
-            //           +
-            //         </button>
-            //       </div>
-            //     </div>
-            //     <span style={{fontSize:'14px',fontWeight:700,marginLeft:'.3rem'}}>R$ {quantity * Number(produto.price)} </span>
-            //   </div>
+           
           );
-        })}
+        })} */}
       </div>
 
       <div
