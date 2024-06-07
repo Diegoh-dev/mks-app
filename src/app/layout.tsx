@@ -9,7 +9,14 @@ export default function RootLayout({
   return (
     <html lang="pt-br" className={montserrat.className}>
       <ReactQueryProvider>
-      <body>{children}</body>
+        
+        <body
+          style={{
+            position: "relative",
+          }}
+        >
+          {children}
+        </body>
       </ReactQueryProvider>
     </html>
   );

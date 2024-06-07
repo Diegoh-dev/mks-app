@@ -2,6 +2,8 @@ import { useProductsList } from "src/domain/produtos/useCase/useProductsList";
 import { SkeletonComponent } from "../Skeleton/Skeleton";
 import { CardProduto } from "../cardProduto/cardProduto";
 import styles from "./ListaProdutos.module.scss";
+import { useContext } from "react";
+import { ContextProduto } from "src/context/contextProduto";
 
 export function ListaProdutos() {
   const { products, isLoading } = useProductsList({
@@ -10,6 +12,8 @@ export function ListaProdutos() {
     sortBy: "id",
     orderBy: "DESC",
   });
+
+
   return (
     <div className={styles.container}>
       <div className={styles.cards}>
