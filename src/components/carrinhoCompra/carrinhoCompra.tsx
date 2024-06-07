@@ -4,6 +4,7 @@ import styles from "./carrinhoCompra.module.scss";
 import { ContextProduto } from "src/context/contextProduto";
 import Image from "next/image";
 import { CardItem } from "./components/CardItem/CardItem";
+import { somaTotal } from "./functions/somaTotalCarrinho";
 export function CarrinhoCompra() {
   const { setListaItens, listaItens } = useContext(ContextProduto);
   const [quantity, setQuantity] = useState(1);
@@ -17,6 +18,8 @@ export function CarrinhoCompra() {
       setQuantity((prevQuantity) => prevQuantity - 1);
     }
   };
+
+  console.log('soam:',somaTotal(listaItens))
 
   return (
     <div className={styles.containerCarrinho}>
@@ -131,7 +134,7 @@ export function CarrinhoCompra() {
           }}
         >
           <p style={{}}>Total:</p>
-          <p>R$798</p>
+          <p>{somaTotal(listaItens)}</p>
         </div>
         <div style={{ width: "100%", height: "97px" }}>
           <button
@@ -147,7 +150,7 @@ export function CarrinhoCompra() {
               justifyContent: "center",
             }}
           >
-            {" "}
+      
             Finalizar Compra
           </button>
         </div>
