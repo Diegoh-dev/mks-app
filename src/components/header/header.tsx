@@ -1,7 +1,10 @@
 import Image from "next/image";
 import styles from "./header.module.scss";
-
-export default function Header() {
+import { Dispatch, SetStateAction } from "react";
+interface Props{
+  setOpenCarrinho: Dispatch<SetStateAction<boolean>>
+}
+export default function Header({setOpenCarrinho}:Props) {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
@@ -10,7 +13,7 @@ export default function Header() {
           <h6>Sistemas</h6>
         </div>
 
-        <button className={styles.buttonCar}>
+        <button className={styles.buttonCar} onClick={() => setOpenCarrinho(true)}>
           <Image
             src="/carrinho.png"
             width={18}

@@ -6,14 +6,28 @@ import { Footer } from "@/components/footer/footer";
 import Header from "@/components/header/header";
 import { useState } from "react";
 import { Produto } from "src/domain/produtos/produtoType";
-
+import { motion, AnimatePresence } from 'framer-motion';
 export default function Page() {
+
+  const [openCarrinho,setOpenCarrinho] = useState(false);
 
   return (
     <>
-     <CarrinhoCompra/>
+   <AnimatePresence>
+      {openCarrinho && (
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: 100 }}
+          transition={{ duration: 0.6 }}
+          key="carrinho"
+        >
+          <CarrinhoCompra setOpenCarrinho={setOpenCarrinho} />
+        </motion.div>
+      )}
+    </AnimatePresence>
 
-      <Header />
+      <Header setOpenCarrinho={setOpenCarrinho}/>
       <ListaProdutos />
       <Footer />
     </>

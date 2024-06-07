@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { Dispatch, SetStateAction, useContext, useState } from "react";
 import { MdCancel } from "react-icons/md";
 import styles from "./carrinhoCompra.module.scss";
 import { ContextProduto } from "src/context/contextProduto";
@@ -6,8 +6,13 @@ import Image from "next/image";
 import { CardItem } from "./components/CardItem/CardItem";
 import { somaTotal } from "./functions/somaTotalCarrinho";
 import { motion } from 'framer-motion';
-export function CarrinhoCompra() {
-  const { setListaItens, listaItens } = useContext(ContextProduto);
+
+interface Props {
+  setOpenCarrinho: Dispatch<SetStateAction<boolean>>;
+  
+}
+export function CarrinhoCompra({setOpenCarrinho}:Props) {
+  const {  listaItens } = useContext(ContextProduto);
   const [quantity, setQuantity] = useState(1);
 
   const increment = () => {
@@ -45,9 +50,9 @@ export function CarrinhoCompra() {
           </p>
         </div>
 
-        <div>
+        <button onClick={() => setOpenCarrinho(false)}>
           <MdCancel size={38} />
-        </div>
+        </button>
       </div>
 
       <div
