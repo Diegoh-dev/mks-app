@@ -7,8 +7,9 @@ import { ContextProduto } from "src/context/contextProduto";
 
 interface Props {
   produto: Produto;
+  disabled?:boolean;
 }
-export function CardProduto({ produto }: Props) {
+export function CardProduto({ produto,disabled }: Props) {
 
   const { adicionarItem} = useContext(ContextProduto);
 
@@ -23,7 +24,7 @@ export function CardProduto({ produto }: Props) {
 
       <p className={styles.descricao}>{produto.description}</p>
 
-      <button className={styles.buttonComprar} onClick={() => adicionarItem(produto)}>
+      <button disabled={disabled} className={styles.buttonComprar} onClick={() => adicionarItem(produto)}>
         <div>
           <RiShoppingBag3Line size={18} />
           COMPRAR
