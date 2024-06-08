@@ -26,6 +26,8 @@ O MKS Sistemas é um projeto de e-commerce desenvolvido para proporcionar uma ex
 - Jest
 - Typescript
 - Testing-library
+- Axios
+- Mui/material
 
 # Como usar?
 Antes de começar, você precisa ter o Git e o Node instalados.
